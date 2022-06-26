@@ -1,0 +1,53 @@
+
+.quote{
+ 
+    width: 80%;
+   
+    margin:10% auto;
+    padding:10px;
+    border: 2px solid rgb(30, 110, 30)    
+}
+
+.quote h1{
+ font-size: 2rem;
+ font-weight: 900;
+ margin-bottom: 5rem;
+ color: green;
+}
+quote p{
+    font-size: 1rem;
+    font-weight: 900;
+    color: black;
+   }
+
+.quote span{
+   display: flex;
+   justify-content: space-between;
+  
+}
+.quote button{
+    margin-right: 10px;
+    width: 5rem;
+    height: 2rem;
+}
+
+.quote button:nth-of-type(1){
+   border:2px solid blue;
+   background-color: white;
+}
+.quote button:nth-of-type(2){
+    border:2px solid red;
+    background-color: white;
+ }
+
+.quote button:nth-of-type(1):hover{
+   
+    background-color: blue;
+    color: white;
+ }
+
+ .quote button:nth-of-type(2):hover{
+   
+    background-color: red;
+    color: white;
+ }
