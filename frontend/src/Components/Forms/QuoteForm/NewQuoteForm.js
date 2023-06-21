@@ -26,8 +26,8 @@ const blogTitle=blogTitleInputRef.current.value;
     window.alert("please enter valid details");
     return;
 }
-const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
-  const res= await axios.post(`${API_ENDPOINT}quotes/new`,{author,blogDescription,blogTitle,imageUrl1,imageUrl2});
+// const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
+  const res= await axios.post(`https://cnblog-backend-production.up.railway.app/quotes/new`,{author,blogDescription,blogTitle,imageUrl1,imageUrl2});
 console.log(res.data);
 Navigate('/quotes');
  }

@@ -18,7 +18,7 @@ const [quote,setQuote]=useState([]);
 async function fetchQuote(){
   const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
     try{
-        const res=await axios.get(`${API_ENDPOINT}/quotes/${params.id}`);
+        const res=await axios.get(`https://cnblog-backend-production.up.railway.app/quotes/${params.id}`);
         setQuote(res.data);
         console.log(res.data)
         console.log("Quote fetched successfully")
@@ -51,13 +51,13 @@ catch(e){
 
 
 const deleteFormHandler= async()=>{
-  const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
+  // const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
 try{
 
   window.alert("Are you sure you wanted to delete this post?");
  
 
-    await axios.delete(`${API_ENDPOINT}quotes/${params.id}`);
+    await axios.delete(`https://cnblog-backend-production.up.railway.app/quotes/${params.id}`);
     console.log("quote deleted successfully");
     Navigate('/quotes');
 

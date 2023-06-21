@@ -18,9 +18,9 @@ const params=useParams();
 console.log(params.id);
 
 const fetchdata=async()=>{
-  const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
+  const API_ENDPOINT= process.env.REACT_APP_API_ENDPOINT;
    try{
-    const res=await axios.get(`${API_ENDPOINT}quotes/${params.id}/`);
+    const res=await axios.get(`https://cnblog-backend-production.up.railway.app/quotes/${params.id}/`);
     SetAuthor(res.data.author);
     SetblogDescription(res.data.blogDescription);
 setblogTitle(res.data.blogTitle);
@@ -79,7 +79,7 @@ const imageUrl2Handler=(e)=>{
             return
         }
         
-    const res=await axios.patch(`${API_ENDPOINT}quotes/${params.id}`,{author,blogDescription,imageUrl1,blogTitle,imageUrl2});
+    const res=await axios.patch(`https://cnblog-backend-production.up.railway.app/quotes/${params.id}`,{author,blogDescription,imageUrl1,blogTitle,imageUrl2});
    console.log("hello")
     console.log(res.data);
     console.log("Updated data successfully");

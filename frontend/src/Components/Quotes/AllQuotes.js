@@ -11,9 +11,9 @@ const AllQuotes = () => {
   // const [loading, setLoading] = useState(true);
 
   async function getAllquotes() {
-    const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
+    // const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
     try {
-      const res = await axios.get(`${API_ENDPOINT}quotes`);
+      const res = await axios.get(`https://cnblog-backend-production.up.railway.app/quotes`);
       setQuotes(res.data)
       console.log(res.data);
       console.log('Data fetched Successfully')
