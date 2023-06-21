@@ -1,3 +1,7 @@
+if(process.env.Node_Env !=='production'){
+  require('dotenv').config();
+}
+
 import React, { Fragment } from 'react'
 //used in routing provided by browser router 
 import { Routes,Route} from 'react-router-dom'
