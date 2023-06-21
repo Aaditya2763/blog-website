@@ -26,7 +26,7 @@ const blogTitle=blogTitleInputRef.current.value;
     window.alert("please enter valid details");
     return;
 }
-  const res= await axios.post('http://localhost:8080/quotes/new',{author,blogDescription,blogTitle,imageUrl1,imageUrl2});
+  const res= await axios.post(`${process.env.SERVER_URL}/quotes/new`,{author,blogDescription,blogTitle,imageUrl1,imageUrl2});
 console.log(res.data);
 Navigate('/quotes');
  }

@@ -12,7 +12,7 @@ const AllQuotes = () => {
 
   async function getAllquotes() {
     try {
-      const res = await axios.get("http://localhost:8080/quotes");
+      const res = await axios.get(`${process.env.SERVER_URL}/quotes`);
       setQuotes(res.data)
       console.log(res.data);
       console.log('Data fetched Successfully')

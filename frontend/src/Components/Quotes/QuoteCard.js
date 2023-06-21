@@ -10,7 +10,7 @@ const src=props.quote.imageUrl1;
   
 const showViewHandler=async(_id)=>{
 //  console.log(_id);
- const res=await axios.get(`http://localhost:8080/quotes/${_id}`);
+ const res=await axios.get(`${process.env.SERVER_URL}/quotes/${_id}`);
   console.log(res.data);
 
 

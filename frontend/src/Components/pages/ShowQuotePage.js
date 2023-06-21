@@ -17,7 +17,7 @@ const [quote,setQuote]=useState([]);
 
 async function fetchQuote(){
     try{
-        const res=await axios.get(`http://localhost:8080/quotes/${params.id}`);
+        const res=await axios.get(`${process.env.SERVER_URL}/quotes/${params.id}`);
         setQuote(res.data);
         console.log(res.data)
         console.log("Quote fetched successfully")
@@ -55,7 +55,7 @@ try{
   window.alert("Are you sure you wanted to delete this post?");
  
 
-    await axios.delete(`http://localhost:8080/quotes/${params.id}`);
+    await axios.delete(`${process.env.SERVER_URL}/quotes/${params.id}`);
     console.log("quote deleted successfully");
     Navigate('/quotes');
 

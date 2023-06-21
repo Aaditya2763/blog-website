@@ -19,7 +19,7 @@ console.log(params.id);
 
 const fetchdata=async()=>{
    try{
-    const res=await axios.get(`http://localhost:8080/quotes/${params.id}/`);
+    const res=await axios.get(`${process.env.SERVER_URL}/quotes/${params.id}/`);
     SetAuthor(res.data.author);
     SetblogDescription(res.data.blogDescription);
 setblogTitle(res.data.blogTitle);
@@ -77,7 +77,7 @@ const imageUrl2Handler=(e)=>{
             return
         }
         console.log("hello")
-    const res=await axios.patch(`http://localhost:8080/quotes/${params.id}`,{author,blogDescription,imageUrl1,blogTitle,imageUrl2});
+    const res=await axios.patch(`${process.env.SERVER_URL}/quotes/${params.id}`,{author,blogDescription,imageUrl1,blogTitle,imageUrl2});
    console.log("hello")
     console.log(res.data);
     console.log("Updated data successfully");
