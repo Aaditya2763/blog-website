@@ -1,0 +1,19 @@
+{
+  "name": "internproject-blog-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aaditya2763/blog-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aaditya2763/blog-website/issues"
+  },
+  "homepage": "https://github.com/Aaditya2763/blog-website#readme"
+}
