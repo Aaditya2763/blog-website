@@ -7,9 +7,18 @@ const quotesSchema=new mongoose.Schema(
         author:{
             type:String
         },
-        quote:{
+        blogDescription:{
           type:String
         },
+        blogTitle:{
+            type:String
+        },
+        imageUrl1:{
+            type:String
+        },
+        imageUrl2:{
+            type:String
+        }
     }
 )
 

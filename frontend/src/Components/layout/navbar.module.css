@@ -5,6 +5,7 @@
 .nav{
     display: flex;
     justify-content: space-around;
+
     background-color: black;
     color: white;
 
@@ -14,26 +15,58 @@
     display: flex;
     color:white;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 20px;
     align-items: center;
+    cursor: pointer;
   
     
 }
 .nav h1{
-    font-size: 3rem;
+    font-size:30px;
+    background-image: linear-gradient(to right,#ff0404, #fdc3a1);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
 }
 
 .nav a{
     text-decoration: none;
     color: white;
 }
-.nav a:hover{
+.nav :hover{
     color:red;
 }
-.nav h1 a:hover{
+.nav :hover{
+    color: white;
+}
+.nav h1 :hover{
     color:white;
 }
 .nav ul li{
     margin-right: 3rem;
+    ;
+     background-image: linear-gradient(to right,#ff0404, #fdc3a1);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+}
+.nav li:hover{
     color: white;
+}
+@media screen and (max-width:450px) {
+    .nav h1{
+        font-size: 20px;
+    }
+    .nav ul{
+        font-size: 15px;
+    }
+    
+}
+@media screen and (max-width:400px) {
+    .nav h1{
+        font-size: 15px;
+        margin-left: 10px;
+    }
+    .nav ul{
+        font-size: 15px;
+    }
+    
 }

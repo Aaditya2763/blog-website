@@ -1,3 +1,6 @@
+ if(process.env.Node_Env !=='production'){
+    require('dotenv').config();
+}
  const express=require('express');
  const app=express();
  const mongoose=require('mongoose')
@@ -5,13 +8,14 @@ const quotesRoutes=require('./api/quotesRoutes')
 const seedDb=require('./seed')
 const cors=require('cors')
 const methodOverride=require('method-override')
- mongoose.connect('mongodb://localhost:27017/Quotes-db')
+const db_Url=process.env.DB_URL;
+ mongoose.connect(db_Url)
  .then(()=>console.log('DB connected'))
  .catch((e)=>console.log(e));
  
 
 //seeding data from dummy_Quotes
-seedDb()
+// seedDb()
 
 
 app.get('/hello',(req,res)=>{

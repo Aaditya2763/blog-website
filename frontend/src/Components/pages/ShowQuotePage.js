@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import classes from './showQuotePage.module.css'
 import axios from 'axios';
-
+import {FaBlog } from "react-icons/fa"
 
 
 
 const ShowQuotePage = (props) => {
+ 
+  //console.log(props);
  const Navigate=useNavigate();
     const  params=useParams();
  // console.log(params.id);
@@ -66,11 +68,20 @@ try{
 
 
   return (
-    <div className={classes.quote}>
+  <>
+        <div><h1 className={classes.h1}><FaBlog style={{color:"blue" }}/> Blogs</h1></div>
+
     
-       <h1>{quote.quote}</h1>
-       <span>
-        <p>{quote.author}</p>
+    <div className={classes.quote}>
+    <div>
+    <h1>{quote.blogTitle}</h1>
+    <img src={quote.imageUrl1} />
+    <h5>{quote.blogDescription}</h5>
+    </div>
+      
+       
+       <span style={{marginTop:40}}>
+        <p><span style={{color:'red'}}>Author</span> {quote.author}</p>
         <div>
         <button onClick={EditFormHandler} >Edit</button>
         <button onClick={deleteFormHandler}>Delete </button>
@@ -78,6 +89,7 @@ try{
        </span>
        
     </div>
+    </>
   )
 }
 

@@ -2,10 +2,22 @@
 .quote{
  
     width: 80%;
-   
-    margin:10% auto;
+   border-radius: 10px;
+   background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000");
+    margin:20px auto;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding:10px;
-    border: 2px solid rgb(30, 110, 30)    
+    border: 2px solid rgb(32, 183, 220)    
+}
+.h1{
+   width: 100%;
+   text-decoration: underline;
+  
+   text-align: center;
+   margin-top:50px;
+   background-image: linear-gradient(to right,#ff0404, #fdc3a1);   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
 }
 
 .quote h1{
@@ -13,6 +25,7 @@
  font-weight: 900;
  margin-bottom: 5rem;
  color: green;
+ text-align: center;
 }
 quote p{
     font-size: 1rem;
@@ -25,6 +38,16 @@ quote p{
    justify-content: space-between;
   
 }
+.quote img{
+  width: 40%;
+  height:10%;
+  margin:30%;
+  margin-top: -30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 2px solid white;
+   
+}
 .quote button{
     margin-right: 10px;
     width: 5rem;
@@ -32,10 +55,16 @@ quote p{
 }
 
 .quote button:nth-of-type(1){
+   background-image: linear-gradient(to right,#0468ff, #14c6d2);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
    border:2px solid blue;
    background-color: white;
 }
 .quote button:nth-of-type(2){
+   background-image: linear-gradient(to right,#ff4704, #d29f14);
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
     border:2px solid red;
     background-color: white;
  }

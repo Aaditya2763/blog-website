@@ -21,8 +21,9 @@ catch(e){
 
  router.post("/quotes/new", async(req,res)=>{
      try{
-         const {author ,quote}=req.body;
-         const newQuote=await Quote.create({author,quote});
+         const {author ,blogDescription,blogTitle,imageUrl1,imageUrl2}=req.body;
+         const newQuote=await Quote.create({author,blogDescription,blogTitle,imageUrl1,imageUrl2});
+         console.log (res);
          res.status(200).json(newQuote);
 
 
@@ -56,11 +57,11 @@ catch(e){
  router.patch('/quotes/:id',async(req,res)=>{
     try{
         const{id}=req.params;
-        const{author,quote}=req.body;
+        const{author,blogDescription,blogTitle,imageUrl1,imageUrl2}=req.body;
        
      
- const quotes= await Quote.findByIdAndUpdate(id,{author,quote});
-   res.status(200).json(quote)
+ const quotes= await Quote.findByIdAndUpdate(id,{author,blogDescription,blogTitle,imageUrl1,imageUrl2});
+   res.status(200).json(quotes)
     console.log(quotes);
     }
     catch(e){

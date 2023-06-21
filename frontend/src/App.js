@@ -6,15 +6,16 @@ import AllQuotes from './Components/Quotes/AllQuotes'
 import NewQuoteForm from './Components/Forms/QuoteForm/NewQuoteForm'
 import ShowQuotePage from './Components/pages/ShowQuotePage'
 import UpadteQuoteForm from './Components/Forms/QuoteForm/UpadteQuoteForm'
+import Homepage from './Components/pages/Homepage'
 const App = () => {
   return (
   <Fragment>
-  <header>
-  <Navbar />
+  <header> 
+ <Navbar />
   </header>
   <main>
     <Routes>
-  
+    <Route path='/'  element={<Homepage />} />;
       <Route path='/quotes'  element={<AllQuotes />} />;
       <Route path='/new'  element={<NewQuoteForm />} />;
       <Route path='/quotes/:id' element={<ShowQuotePage />} />;
