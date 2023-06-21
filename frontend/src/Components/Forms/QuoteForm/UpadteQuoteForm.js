@@ -18,8 +18,9 @@ const params=useParams();
 console.log(params.id);
 
 const fetchdata=async()=>{
+  const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
    try{
-    const res=await axios.get(`${process.env.SERVER_URL}/quotes/${params.id}/`);
+    const res=await axios.get(`${API_ENDPOINT}quotes/${params.id}/`);
     SetAuthor(res.data.author);
     SetblogDescription(res.data.blogDescription);
 setblogTitle(res.data.blogTitle);
@@ -70,14 +71,15 @@ const imageUrl2Handler=(e)=>{
 
  const FormSubmitHandler=async(e)=>{
      e.preventDefault();
+     const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
     try{
         //  console.log(Author);
         if(author.length<3 || blogDescription.length<20){
             window.alert("please enter valid details");
             return
         }
-        console.log("hello")
-    const res=await axios.patch(`${process.env.SERVER_URL}/quotes/${params.id}`,{author,blogDescription,imageUrl1,blogTitle,imageUrl2});
+        
+    const res=await axios.patch(`${API_ENDPOINT}quotes/${params.id}`,{author,blogDescription,imageUrl1,blogTitle,imageUrl2});
    console.log("hello")
     console.log(res.data);
     console.log("Updated data successfully");

@@ -16,8 +16,9 @@ const ShowQuotePage = (props) => {
 const [quote,setQuote]=useState([]);
 
 async function fetchQuote(){
+  const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
     try{
-        const res=await axios.get(`${process.env.SERVER_URL}/quotes/${params.id}`);
+        const res=await axios.get(`${API_ENDPOINT}/quotes/${params.id}`);
         setQuote(res.data);
         console.log(res.data)
         console.log("Quote fetched successfully")
@@ -50,12 +51,13 @@ catch(e){
 
 
 const deleteFormHandler= async()=>{
+  const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
 try{
 
   window.alert("Are you sure you wanted to delete this post?");
  
 
-    await axios.delete(`${process.env.SERVER_URL}/quotes/${params.id}`);
+    await axios.delete(`${API_ENDPOINT}quotes/${params.id}`);
     console.log("quote deleted successfully");
     Navigate('/quotes');
 

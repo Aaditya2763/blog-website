@@ -9,8 +9,9 @@ const src=props.quote.imageUrl1;
   const Navigate=useNavigate()
   
 const showViewHandler=async(_id)=>{
+  const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
 //  console.log(_id);
- const res=await axios.get(`${process.env.SERVER_URL}/quotes/${_id}`);
+ const res=await axios.get(`${API_ENDPOINT}quotes/${_id}`);
   console.log(res.data);
 
 
