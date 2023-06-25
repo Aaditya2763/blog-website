@@ -18,7 +18,7 @@ const [quote,setQuote]=useState([]);
 async function fetchQuote(){
   const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
     try{
-        const res=await axios.get(`https://cnblog-backend-production.up.railway.app/quotes/${params.id}`);
+        const res=await axios.get(`https://cnblog-backend-production.up.railway.app/${params.id}`);
         setQuote(res.data);
         console.log(res.data)
         console.log("Quote fetched successfully")

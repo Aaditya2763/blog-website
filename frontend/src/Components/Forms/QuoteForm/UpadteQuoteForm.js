@@ -79,7 +79,7 @@ const imageUrl2Handler=(e)=>{
             return
         }
         
-    const res=await axios.patch(`https://cnblog-backend-production.up.railway.app/quotes/${params.id}`,{author,blogDescription,imageUrl1,blogTitle,imageUrl2});
+    const res=await axios.patch(`https://cnblog-backend-production.up.railway.app/${params.id}`,{author,blogDescription,imageUrl1,blogTitle,imageUrl2});
    console.log("hello")
     console.log(res.data);
     console.log("Updated data successfully");
